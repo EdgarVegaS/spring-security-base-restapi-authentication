@@ -1,0 +1,33 @@
+application-name: "Tibianos 0.1"
+
+server:
+    port: 9101
+
+
+logging.file: /home/javaApp/logApp/tibianos-fanpage.log
+logging:
+    file:
+        max-history: 5
+    level:
+        com.netflix.discovery: 'OFF'
+        ROOT: INFO
+        c.i.inretail.task: INFO
+        org.springframework.cloud: 'DEBUG'
+        com.atsistemas: 'DEBUG'
+
+tibia:
+    endpoint: https://api.tibiadata.com/v2/
+    char: characters/
+    high: highscores/
+    guilds:
+        g-all: guilds/
+        g-specific: guild/
+    house:
+    news: 
+        lstnw : latestnews
+        new : news/
+    world:
+        w-all: worlds
+        w-specific: world/
+
+server.error.include-message: always
